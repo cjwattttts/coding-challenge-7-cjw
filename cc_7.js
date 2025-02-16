@@ -17,3 +17,17 @@ console.log(calculateHourlyWage(52000, 40)); // Expected output: "Hourly Wage: $
 console.log(calculateHourlyWage(75000, 35)); // Expected output: "Hourly Wage: $41.21"
 
 // TASK 3 
+const calculateLoyaltyDiscount = (amount, years) => { // establishes function to calculate discount based on customer's loyal years
+    let discount = 0; // sets discount to 0
+    if (years >= 5) discount = 0.15; // sets 15% discount
+    else if (years >= 3) discount = 0.10; // sets 10% discount
+    else discount = 0.5; // sets 5% discount
+
+    let discountedPrice = amount * (1 - discount); // calculates discounted price
+
+    return `Discounted Price: $${discountedPrice.toFixed(2)}`;
+};
+
+console.log(calculateLoyaltyDiscount(100, 6)); // Expected output: "Discounted Price: $85.00"
+console.log(calculateLoyaltyDiscount(200, 2)); // Expected output: "Discounted Price: $190.00"
+
