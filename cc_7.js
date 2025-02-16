@@ -78,3 +78,13 @@ function createBudgetTracker() { // sets the balance to 0
     };
 }
 
+// TASK 8
+function calculateGrowth(years, revenue) { // calculates projected revenue growth adding 5% every year
+    if (years === 10) return `Projected Revenue: $${revenue.toFixed(2)}`; // if years equals 10, return current revenue
+
+    revenue *= 1.05; // increase revenue by 5% and call function with years -1
+    return calculateGrowth(years +1, revenue);
+}
+
+console.log(calculateGrowth(8, 1000)); // Expected output: "Projected Revenue: $1102.50"
+console.log(calculateGrowth(5, 5000)); // Expected output: "Projected Revenue: $6381.41"
