@@ -68,3 +68,13 @@ return transactions.filter(filterFunction);
 let transactions = [500, 1200, 3000, 800, 2200];
 console.log(filterHighValueTransactions(transactions, amount => amount > 1000)); // Expected output: [1200, 3000, 2200]
 
+// TASK 7
+function createBudgetTracker() { // sets the balance to 0
+    let balance = 0;
+
+    return function(expense) { // creates a function to add expenses 
+        balance -= expense; // removes expense from balance
+        return `Current Balance: $${balance}`;
+    };
+}
+
