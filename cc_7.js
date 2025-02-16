@@ -1,6 +1,6 @@
 // TASK 1
 function calculateInvoice(subtotal, taxRate, discount) { // calculates total invoice amount
-    let total = (subtotal + (subtotal * taxRate)) - discount; // calculates the total amount with tac minus discount
+    let total = (subtotal + (subtotal * taxRate)) - discount; // calculates the total amount with tax minus discount
     console.log(`Total Invoice: $${total.toFixed(2)}`);
 }
 
