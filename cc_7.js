@@ -21,7 +21,7 @@ const calculateLoyaltyDiscount = (amount, years) => { // establishes function to
     let discount = 0; // sets discount to 0
     if (years >= 5) discount = 0.15; // sets 15% discount
     else if (years >= 3) discount = 0.10; // sets 10% discount
-    else discount = 0.5; // sets 5% discount
+    else discount = 0.05; // sets 5% discount
 
     let discountedPrice = amount * (1 - discount); // calculates discounted price
 
